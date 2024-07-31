@@ -1,0 +1,15 @@
+{
+  "name": "js-summer-prep-2024",
+  "version": "1.0.0",
+  "description": "After each session class notes and exercises will be posted to this repo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Edgardo Molina",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3"
+  }
+}
