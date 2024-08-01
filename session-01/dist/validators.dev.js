@@ -1,3 +1,5 @@
+"use strict";
+
 /*
   Write a function that returns true or false if the given username
   is valid according to the following rules:
@@ -7,21 +9,24 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  const usernamePattern = /^[a-zA-Z][a-zA-Z0-9]{2,9}$/;
+  var usernamePattern = /^[a-zA-Z][a-zA-Z0-9]{2,9}$/;
   return usernamePattern.test(username);
-  
 }
-
 /*
   Write a function that returns true or false if the given password
   is valid according to the following rules:
   - password must be between (and including) 10-64 characters in length
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
+
+
 function validPassword(password) {
-  const passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]{10,64}$/;
+  var passwordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]{10,64}$/;
   return passwordPattern.test(password);
   return;
 }
 
-module.exports = { validUsername, validPassword };
+module.exports = {
+  validUsername: validUsername,
+  validPassword: validPassword
+};
