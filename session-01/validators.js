@@ -14,7 +14,7 @@ function validUsername(username)
   let hasSpecialCharacter = false;
   for (let j = 0; j < username.length; j++)
   {
-    if (!isLetter(username.cahrAt(j)) && (!isNumber(username.cahrAt(j)))) 
+    if (!isLetter(username[j]) && (!isNumber(username[j]))) 
     {
       hasSpecialCharacter = true;
       break;
@@ -36,8 +36,8 @@ function validPassword(password) {
 
   for (let j = 0; j < password.length; j++)
   {
-    if (isLetter(password.cahrAt(j))) ++countLetter;
-    else if (isNumber(password.cahrAt(j))) ++countNumber;
+    if (isLetter(password[j])) ++countLetter;
+    else if (isNumber(password[j])) ++countNumber;
         else ++countSpecial;
   }
 
