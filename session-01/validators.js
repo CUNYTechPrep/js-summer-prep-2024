@@ -20,7 +20,8 @@ function validUsername(username)
       break;
     }
   }
-  return !hasSpecialCharacter && (username.length >= 3) && (username.length <= 10) && isLetter(username[0]);
+return !hasSpecialCharacter && isLetter(username[0]) 
+  && (username.length >= 3) && (username.length <= 10);
 }
 
 /*
