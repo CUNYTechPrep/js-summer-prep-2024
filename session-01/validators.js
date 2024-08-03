@@ -6,8 +6,21 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
-function validUsername(username) {
-  return;
+function isLetter(chr) {return chr.match(/[a-z]/i);}
+function isNumber(chr) {return /^[0-9]$/.test(chr);}
+
+function validUsername(username) 
+{
+  let hasSpecialCharacter = false;
+  for (let j = 0; j < username.length; j++)
+  {
+    if (!isLetter(username.cahrAt(j)) && (!isNumber(username.cahrAt(j)))) 
+    {
+      hasSpecialCharacter = true;
+      break;
+    }
+  }
+  return !hasSpecialCharacter && (username.length >= 3) && (username.length <= 10) && isLetter(username.cahrAt(0));
 }
 
 /*
@@ -17,7 +30,22 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  return;
+  let countLetter = 0;
+  let countNumber = 0;
+  let countSpecial = 0;
+
+  for (let j = 0; j < password.length; j++)
+  {
+    if (isLetter(password.cahrAt(j))) ++countLetter;
+    else if (isNumber(password.cahrAt(j))) ++countNumber;
+        else ++countSpecial;
+  }
+
+
+
+  return (countLetter > 0) && (countNumber > 0) && (countSpecial > 0) && (password.length >= 10) && (password.length <= 64);
 }
+console.log(validPassword("zeus123&me"));
+console.log(validUsername("ljupcho123*"));
 
 module.exports = { validUsername, validPassword };
