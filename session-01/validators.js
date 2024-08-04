@@ -8,7 +8,18 @@
 */
 function validUsername(username) {
   return;
+  if (username.length >= 3 && username.length <= 10 && /^[a-zA-Z]/.test(username) && /^[a-zA-Z0-9]+$/.test(username)) 
+    return true;
+  else 
+    return false; 
 }
+
+  console.log(isValidUsername("ab12")); //true
+  console.log(isValidUsername("ab")); // false
+  console.log(isValidUsername("12bc")); // false
+  console.log(isValidUsername("ab!12")); // false
+  console.log(isValidUsername("abcdef")); // false
+  
 
 /*
   Write a function that returns true or false if the given password
@@ -18,6 +29,12 @@ function validUsername(username) {
 */
 function validPassword(password) {
   return;
+  function validPassword(password) {
+    return /[a-zA-Z]/.test(password) && /\d/.test(password) && /[!@#$%^&*(),.?":{}|<>]/.test(password) && password.length >= 10 && password.length <= 64;
+  }
 }
+
+console.log(validPassword(password1!)); //true
+console.log(validPassword(pass1word)); //false
 
 module.exports = { validUsername, validPassword };
