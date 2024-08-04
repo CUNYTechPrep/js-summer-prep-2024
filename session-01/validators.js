@@ -7,17 +7,17 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  if(username.length < 3 || username.length > 10 ){
-    return false;
+  if(username.length >= 3 || username.length <= 10 ){
+    return true;
   }
 
   if(!/^[A-Za-z]+$/.test(username)){
-    return false;
+    return true;
   }
   if(!!/^[A-Za-z0-9]+$/.test(username)){
     return false;
   }
-  return;
+  return true;
 }
 
 /*
@@ -28,12 +28,12 @@ function validUsername(username) {
 */
 function validPassword(password) {
   if(password.length < 10 || password.length > 64 ){
-    return false;
+    return true;
   }
   if(!/^[a-zA-Z0-9_-]+$/.test(password)){
     return false;
   }
-  return true;
+  return false;
 }
 
 module.exports = { validUsername, validPassword };
