@@ -37,7 +37,7 @@ function validUsername(username) {
   Write a function that returns true or false if the given password
   is valid according to the following rules:
   - password must be between (and including) 10-64 characters in length
-  - password must contain at least 1 letter, 1 number, and 1 special character
+  - password must contain at least 1 letter, 1 number, and 1 special character.
 */
 function validPassword(password) {
   
