@@ -61,8 +61,5 @@ function validPassword(password) {
 
 module.exports = { validUsername, validPassword };
 
-// Test the functions
-let username = "3epoa132";
-let password = "P@ssw0rd123";
-console.log(validUsername(username)); 
-console.log(validPassword(password)); 
+
+
