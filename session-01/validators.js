@@ -7,19 +7,20 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  return;
-  if (username.length >= 3 && username.length <= 10 && /^[a-zA-Z]/.test(username) && /^[a-zA-Z0-9]+$/.test(username)) 
-    return true;
-  else 
-    return false; 
-}
+  if (username.length < 3 || username.length > 10) {
+    return false;
+  }
 
-  console.log(isValidUsername("ab12")); //true
-  console.log(isValidUsername("ab")); // false
-  console.log(isValidUsername("12bc")); // false
-  console.log(isValidUsername("ab!12")); // false
-  console.log(isValidUsername("abcdef")); // false
-  
+  if (!/^[a-zA-Z]/.test(username)) {
+    return false;
+  }
+
+  if (!/^[a-zA-Z0-9]+$/.test(username)) {
+    return false;
+  }
+
+  return true
+};
 
 /*
   Write a function that returns true or false if the given password
@@ -27,14 +28,22 @@ function validUsername(username) {
   - password must be between (and including) 10-64 characters in length
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
+
 function validPassword(password) {
-  return;
-  function validPassword(password) {
-    return /[a-zA-Z]/.test(password) && /\d/.test(password) && /[!@#$%^&*(),.?":{}|<>]/.test(password) && password.length >= 10 && password.length <= 64;
+  if (password.length < 10 || password.length > 64) {
+    return false;
   }
+  if (!/[a-zA-Z]/.test(password)) {
+    return false;
+  }
+  if (!/\d/.test(password)) {
+    return false;
+  }
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    return false;
+  }
+  return true;
 }
 
-console.log(validPassword(password1!)); //true
-console.log(validPassword(pass1word)); //false
 
 module.exports = { validUsername, validPassword };
