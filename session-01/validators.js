@@ -63,4 +63,5 @@ function validPassword(password) {
   return goodPassword;
 }
 
+// Test to see that git is working and is able to push to repo on github.
 module.exports = { validUsername, validPassword };
