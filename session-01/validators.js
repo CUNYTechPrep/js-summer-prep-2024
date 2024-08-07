@@ -1,23 +1,42 @@
-/*
-  Write a function that returns true or false if the given username
-  is valid according to the following rules:
-  - username must be between (and including) 3-10 characters in length
-  - username must begin with a letter
-  - username may contain numbers and letters
-  - username cannot contain special characters
-*/
 function validUsername(username) {
-  return;
+  // Check length
+  if (username.length < 3 || username.length > 10) {
+    return false;
+  }
+  
+  // Check if it begins with a letter
+  if (!/[a-zA-Z]/.test(username[0])) {
+    return false;
+  }
+  
+  // Check if it contains only letters and numbers
+  for (let char of username) {
+    if (!/[a-zA-Z0-9]/.test(char)) {
+      return false;
+    }
+  }
+  
+  return true;
 }
 
-/*
-  Write a function that returns true or false if the given password
-  is valid according to the following rules:
-  - password must be between (and including) 10-64 characters in length
-  - password must contain at least 1 letter, 1 number, and 1 special character
-*/
 function validPassword(password) {
-  return;
+  // Check length
+  if (password.length < 10 || password.length > 64) {
+    return false;
+  }
+  
+  let hasLetter = false;
+  let hasNumber = false;
+  let hasSpecial = false;
+  const specialChars = "!@#$%^&*()_+-=[]{}|;':\",./<>?";
+
+  for (let char of password) {
+    if (/[a-zA-Z]/.test(char)) hasLetter = true;
+    else if (/\d/.test(char)) hasNumber = true;
+    else if (specialChars.includes(char)) hasSpecial = true;
+  }
+
+  return hasLetter && hasNumber && hasSpecial;
 }
 
 module.exports = { validUsername, validPassword };
