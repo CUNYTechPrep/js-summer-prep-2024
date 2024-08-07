@@ -11,11 +11,15 @@ function validUsername(username) {
     return false;
   }
 
-  if((!/^[a-zA-Z]/).test(username)){
+  if(!(/^[a-zA-Z]/).test(username)){
     return false;
   }
 
-  return (!/^[a-zA-Z0-9]+$/).test(username);
+  if(!(/^[a-zA-Z0-9]+$/).test(username)){
+    return false;
+  }
+
+  return true;
 }
 
 /*
@@ -29,7 +33,11 @@ function validPassword(password) {
     return false;
   }
   
-  return (/[a-zA-Z]/).test(password) && (/\d/).test(password) && (/[^a-zA-Z0-9]/).test(password);
+  if (!(/[a-zA-Z]/).test(password) || !(/[0-9]/).test(password) || !(/[!@#$%^&*(),.?":{}|<>]/).test(password)){
+    return false;
+  }
+
+  return true;
 }
 
 module.exports = { validUsername, validPassword };
