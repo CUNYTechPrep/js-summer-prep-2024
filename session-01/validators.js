@@ -34,4 +34,4 @@ function validPassword(password) {
 
 module.exports = { validUsername, validPassword };
 
-module.exports = { validUsername, validPassword };
+
