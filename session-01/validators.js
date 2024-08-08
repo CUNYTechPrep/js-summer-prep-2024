@@ -43,7 +43,6 @@ function validPassword(password) {
   }
   return (countLetter > 0) && (countNumber > 0) && (countSpecial > 0) && (password.length >= 10) && (password.length <= 64);
 }
-console.log(validPassword("zeus123&me"));
-console.log(validUsername("ljupcho123*"));
+
 
 module.exports = { validUsername, validPassword };
