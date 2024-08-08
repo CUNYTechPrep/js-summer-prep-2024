@@ -14,13 +14,13 @@ function validUsername(username)
   let hasSpecialCharacter = false;
   for (let j = 0; j < username.length; j++)
   {
-    if (!isLetter(username.cahrAt(j)) && (!isNumber(username.cahrAt(j)))) 
+    if (!isLetter(username[j]) && (!isNumber(username[j]))) 
     {
       hasSpecialCharacter = true;
       break;
     }
   }
-  return !hasSpecialCharacter && (username.length >= 3) && (username.length <= 10) && isLetter(username.cahrAt(0));
+  return !hasSpecialCharacter && (username.length >= 3) && (username.length <= 10) && isLetter(username[0]);
 }
 
 /*
@@ -36,8 +36,8 @@ function validPassword(password) {
 
   for (let j = 0; j < password.length; j++)
   {
-    if (isLetter(password.cahrAt(j))) ++countLetter;
-    else if (isNumber(password.cahrAt(j))) ++countNumber;
+    if (isLetter(password[j])) ++countLetter;
+    else if (isNumber(password[j])) ++countNumber;
         else ++countSpecial;
   }
 
@@ -45,7 +45,5 @@ function validPassword(password) {
 
   return (countLetter > 0) && (countNumber > 0) && (countSpecial > 0) && (password.length >= 10) && (password.length <= 64);
 }
-console.log(validPassword("zeus123&me"));
-console.log(validUsername("ljupcho123*"));
 
 module.exports = { validUsername, validPassword };
