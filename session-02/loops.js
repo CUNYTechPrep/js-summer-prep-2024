@@ -25,7 +25,7 @@ for (const fruit of fruits) {
 //   console.log(item);
 // }
 
-// .forEach
+// .forEach, its a function that tkes in a function and applies the function to every element of the index
 // function myPrint(item) {
 //   console.log("Delicious: ", item);
 // }
@@ -40,7 +40,7 @@ console.log(result);
 // callback function
 
 // .map() // transform/convert/change
-
+//your able to return the results into  new array, store into new variable while keeping the original array unchanged
 let pluralFruits = fruits.map((f) => f + "s");
 
 console.log(pluralFruits);
