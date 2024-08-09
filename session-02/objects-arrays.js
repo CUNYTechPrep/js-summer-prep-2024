@@ -63,6 +63,6 @@ console.log(Object.keys(things)); // don't do this
 fruits.push("Durian");
 console.log(fruits);
 
-// pop / shift
+// pop(removes element from the back) / shift(removes element from the front)
 console.log(fruits.pop(), fruits.shift());
 console.log(fruits.length);
