@@ -7,8 +7,8 @@ function transformArrayToUpper(listOfStrings) {
   const uppercaseStrings = [];
 
   // iterate through the inital array, and convert every element to uppercase
-  for (const index in listOfStrings){
-    uppercaseStrings.push(listOfStrings[index].toUpperCase());
+  for (const index of listOfStrings){
+    uppercaseStrings.push(index.toUpperCase());
   }
   
   // return the converted array
@@ -29,9 +29,8 @@ function sumOfAllAges(listOfStudentObjects) {
   let totalAge = 0;
 
   //for every entry, add that age to the total age;
-  for (const index in listOfStudentObjects){
-    const student = listOfStudentObjects[index];
-    totalAge += student.age; 
+  for (const index of listOfStudentObjects){
+    if (index.age) totalAge += index.age;
   }
 
   //Return the total age
