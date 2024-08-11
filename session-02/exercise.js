@@ -3,7 +3,13 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  const uppercaseStrings = [];
+
+  for (const index in listOfStrings){
+    uppercaseStrings.push(listOfStrings[index].toUpperCase());
+  }
+  
+  return uppercaseStrings;
 }
 
 /*
