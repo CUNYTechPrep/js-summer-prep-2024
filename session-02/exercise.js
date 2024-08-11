@@ -3,12 +3,15 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
+  // instalization of an empty array
   const uppercaseStrings = [];
 
+  // iterate through the inital array, and convert every element to uppercase
   for (const index in listOfStrings){
     uppercaseStrings.push(listOfStrings[index].toUpperCase());
   }
   
+  // return the converted array
   return uppercaseStrings;
 }
 
@@ -22,7 +25,17 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  //Initalize the empty age variable
+  let totalAge = 0;
+
+  //for every entry, add that age to the total age;
+  for (const index in listOfStudentObjects){
+    const student = listOfStudentObjects[index];
+    totalAge += student.age; 
+  }
+
+  //Return the total age
+  return totalAge;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
