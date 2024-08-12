@@ -25,6 +25,7 @@ function sumOfAllAges(listOfStudentObjects) {
     }
   }
   return age_sum;
+
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
