@@ -1,22 +1,18 @@
-/*
-  Transform the input array of strings into uppercase strings
-  For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
-*/
+// Transform the input array of strings into uppercase strings
 function transformArrayToUpper(listOfStrings) {
-  return;
+  // Use the map function to transform each string in the array to uppercase
+  return listOfStrings.map((str) => str.toUpperCase());
 }
 
-/*
-  Write a function that returns the sum of all student ages.
-  The function will be passed an array of objects and the result
-  will be the sum of all ages.
-  - Note, not all objects will contain an age. Omit these objects.
-  For example, for the input:
-    [{ name: 'Sandra', age: 31 }, {}, { name: 'Didi', age: 20}]
-    the function should return 51
-*/
+// Write a function that returns the sum of all student ages
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  // Use the reduce function to sum up the ages, only adding if the age exists
+  return listOfStudentObjects.reduce((sum, student) => {
+    if (student.age !== undefined) {
+      return sum + student.age;
+    }
+    return sum;
+  }, 0); // Start with a sum of 0
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
