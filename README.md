@@ -33,3 +33,8 @@ After each session you can:
 
 - complete [validator functions](session-01/validators.js)
 - Due: August 7, 2024 by 12pm.
+
+### Session 02
+
+- complete [exercise functions](session-02/exercise.js)
+- Due: August 14, 2024 by 12pm.
