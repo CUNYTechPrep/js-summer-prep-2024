@@ -1,4 +1,5 @@
 // Transform the input array of strings into uppercase strings
+
 function transformArrayToUpper(listOfStrings) {
   // Use the map function to transform each string in the array to uppercase
   return listOfStrings.map((str) => str.toUpperCase());
