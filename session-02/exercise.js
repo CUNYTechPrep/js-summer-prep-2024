@@ -3,7 +3,14 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+
+    arraySize = listOfStrings.length;
+
+    for(i = 0; i < arraySize; i++){
+      listOfStrings[i] = listOfStrings[i].toUpperCase();
+    }
+
+  return listOfStrings;
 }
 
 /*
@@ -13,10 +20,21 @@ function transformArrayToUpper(listOfStrings) {
   - Note, not all objects will contain an age. Omit these objects.
   For example, for the input:
     [{ name: 'Sandra', age: 31 }, {}, { name: 'Didi', age: 20}]
-    the function should return 51
+  the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+
+  arraySize = listOfStudentObjects.length;
+  totalAge = 0;
+
+  for(i = 0; i < arraySize; i++){
+
+    if(listOfStudentObjects[i].age > 0){
+       totalAge += listOfStudentObjects[i].age
+    }
+
+  }
+  return totalAge;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
