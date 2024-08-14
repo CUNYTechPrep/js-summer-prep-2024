@@ -3,7 +3,7 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  return listOfStrings.map(str => str.toUpperCase());
 }
 
 /*
@@ -16,7 +16,12 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  return listOfStudentObjects.reduce((sum, student) => {
+    if (student.age) {
+      return sum + student.age;
+    }
+    return sum;
+  }, 0);
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
