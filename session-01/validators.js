@@ -25,14 +25,14 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  if(password.length< 10 || password.length > 64 )
+  if(password.length < 10 || password.length > 64 )
       return false; 
   
   let hasLetter = /[a-zA-Z]/.test(password);
-  let hasNum = /[0-9]/.test(password);
-  let hasSpecialChar = /[^a-zA-Z0-9]/.test(password)
+  let hasNumber = /[0-9]/.test(password);
+  let hasSpecialCharacter = /[^a-zA-Z0-9]/.test(password)
 
-  return hasLetter && hasNum && hasSpecialChar;
+  return hasLetter && hasNumber && hasSpecialCharacter;
 }
 
 module.exports = { validUsername, validPassword };
