@@ -7,7 +7,7 @@ function transformArrayToUpper(listOfStrings) {
     let words = listOfStrings[i];
     listOfStrings[i] = words.toUpperCase();
   }
-  console.log(listOfStrings);
+
   return listOfStrings;
 }
 
@@ -27,7 +27,7 @@ function sumOfAllAges(listOfStudentObjects) {
     if(typeof age === 'number')
       sum += age;
   }
-  console.log(sum);
+
   return sum;
 }
 
