@@ -4,6 +4,8 @@
 */
 function transformArrayToUpper(listOfStrings) {
   return;
+    return listOfStrings.map(str => str.toUpperCase());
+
 }
 
 /*
@@ -17,6 +19,15 @@ function transformArrayToUpper(listOfStrings) {
 */
 function sumOfAllAges(listOfStudentObjects) {
   return;
+let totalAge = 0;
+
+  for (let i = 0; i < listOfStudentObjects.length; i++) {
+    if (listOfStudentObjects[i].age) {
+      totalAge += listOfStudentObjects[i].age;
+    }
+  }
+
+  return totalAge;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };
