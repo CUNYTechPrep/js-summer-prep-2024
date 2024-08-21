@@ -23,6 +23,9 @@ let driverAge = 16; // try changing to 16 or greater
 driverAge >= 16 && console.log("this person can drive");
 
 // Ternary operator: ( ? : )
+let luckyNumber = 8; // Define luckyNumber
+let guess = 8; // Define guess
+
 let result = luckyNumber === guess ? "right" : "wrong";
 
 // let result = "";
